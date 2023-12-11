@@ -1,0 +1,22 @@
+name: first
+on: [push,workflow_dispatch]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+        uses: actions/checkout@v4
+      - name: Install node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - name: install dependencies
+        run: npm ci
+      - name: run lint
+        run: npm lint
+      - name: run test
+        run: npm test
+      - name: run build
+        run: npm build
+      - name: Echo done
+        run: echo "Done linting, testing and building"

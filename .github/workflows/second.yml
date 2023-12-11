@@ -1,0 +1,9 @@
+name: second
+on: issues
+  types: [opened, edited, milestoned]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo details
+        run: echo "${{ toJSON(github) }}"
