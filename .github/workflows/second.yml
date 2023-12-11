@@ -1,6 +1,7 @@
 name: second
-on: issues
-  types: [opened, edited, milestoned]
+on:
+  issues:
+    types: [opened, edited, milestoned]
 jobs:
   test:
     runs-on: ubuntu-latest
