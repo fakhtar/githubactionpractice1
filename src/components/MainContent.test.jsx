@@ -1,6 +1,9 @@
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import describe from 'mocha';
+import it from 'mocha';
+import expect from 'mocha';
 
 import MainContent from './MainContent';
 
